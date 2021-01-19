@@ -154,6 +154,7 @@ header .jumbotron {
   color: #F8F8F8;
   font-weight: 800;
   border: #283eff solid 2px;
+  transition: 0.6s ease;
 }
 
 #main .location-page .location-places .location-element img {
@@ -180,14 +181,14 @@ header .jumbotron {
 * {box-sizing:border-box}
 
 /* Slideshow container */
-.slideshow-container {
+#main .apply-page .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlides {
+#main .apply-page .mySlides {
   display: none;
 }
 
@@ -323,8 +324,13 @@ header .jumbotron {
 .btn:hover {
   background-color: #d8ac72;
   color: black;
+  transition: 0.6s ease;
 }
 
 hr {
   margin: 0 4rem;
+}
+
+.hide {
+  opacity: 0;
 }
