@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f7f7f7;
 }
 
 /* --------------header + nav --------- */
@@ -11,10 +12,19 @@ header .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  height: 10rem;
 }
 header .main-nav .logo-nav {
   list-style: none;
   margin-right: 50rem;
+}
+
+header .main-nav .logo-nav .logo img {
+  width: 15rem;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 header .main-nav .side-nav {
@@ -42,10 +52,71 @@ header .main-nav .side-nav .nav-element a:hover {
   color: #f09041;
 }
 
+/* ---------header + background image(jumbotron)------------ */
+header .jumbotron {
+  background: url("../images/travel.JPG") no-repeat center/100%;
+  width: 100%;
+  height: 40rem;
+}
 
+/*----------------main ----------------*/
 
+/* ---------- main + welcome ------------ */
+
+#main {
+  margin: 0;
+  padding: 0;
+}
+
+#main .welcome-page {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 8rem 0;
+}
+
+#main .welcome-page .welcome-image {
+  background: url("../images/boat.jpg") no-repeat center/100%;
+  margin-left: 5rem;
+}
+
+#main .welcome-page .welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+  padding: 5rem 5rem;
+}
+
+#main .welcome-page .welcome-text h1 {
+  margin-bottom: 4rem;
+  font-size: 2.6rem;
+  padding: 0 2rem;
+}
+
+#main .welcome-page .welcome-text p {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+#main .welcome-page .welcome-text .btn {
+  background-color: #f46f4c;
+  color: white;
+}
 
 /* utilities */
 .container {
   max-width: 960px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 1.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
 }
