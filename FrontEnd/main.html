@@ -2,8 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <title>Main</title>
   </head>
   <body>
@@ -25,10 +37,10 @@
             <a href="location.html">여행지</a>
           </li>
           <li class="nav-element">
-            <a href="apply.html">지원하기</a>
+            <a href="apply.html">신청</a>
           </li>
           <li class="nav-element">
-            <a href="login.html">로그인</a>
+            <a href="login.html"><i class="fas fa-user-circle"></i>로그인</a>
           </li>
         </ul>
       </nav>
@@ -39,37 +51,89 @@
         <div class="welcome-image"></div>
         <div class="welcome-text">
           <h1>Travel Together에 초대합니다</h1>
-          <p>Travel Together는 새로운 여행의 동행을 구하고 싶거나, 혼자 또는 커플끼리 여행가기 곤란할 경우 함께 여행할 사람을 모집하는 플랫폼입니다. 또한 전문 여행가와 함께 동행할 수 있는 기회를 제공하여 많은 혜택을 수혜받도록 하고 있습니다.</p>
-          <a class="btn" href="history.html">더 알아보기</a>
+          <p>
+            Travel Together는 새로운 여행의 동행을 구하고 싶거나, 혼자 또는
+            커플끼리 여행가기 곤란할 경우 함께 여행할 사람을 모집하는
+            플랫폼입니다. 또한 전문 여행가와 함께 동행할 수 있는 기회를 제공하여
+            많은 혜택을 수혜받도록 하고 있습니다.
+          </p>
+          <a class="btn" href="about.html">더 알아보기</a>
         </div>
       </section>
-
+      <hr />
       <section class="location-page container-fluid">
         <div class="location-text">
           <h1>가고싶은 곳을 찾아보세요</h1>
-          <p>Travel Together에서 이미 다녀온 사람들의 생생한 후기를 보면서 여행을 떠날 장소를 골라보세요.</p>
-          <a class="btn" href="history.html">여행후기 확인하기</a>
+          <p>
+            Travel Together에서 이미 다녀온 사람들의 생생한 후기를 보면서 여행을
+            떠날 장소를 골라보세요.
+          </p>
+          <a class="btn" href="location.html">여행후기 확인하기</a>
         </div>
         <div class="location-places">
           <div class="location-element">
-            <img src="./images/korea.jpg" alt="travel picture">
+            <img src="./images/korea.jpg" alt="travel picture" />
             <p>국내</p>
           </div>
           <div class="location-element">
-            <img src="./images/europe.jpg" alt="travel picture">
+            <img src="./images/europe.jpg" alt="travel picture" />
             <p>유럽</p>
           </div>
           <div class="location-element">
-            <img src="./images/asia.jpg" alt="travel picture">
+            <img src="./images/asia.jpg" alt="travel picture" />
             <p>아시아</p>
           </div>
           <div class="location-element">
-            <img src="./images/america.jpg" alt="travel picture">
+            <img src="./images/america.jpg" alt="travel picture" />
             <p>미국</p>
           </div>
         </div>
       </section>
+      <hr />
+      <section class="apply-page container-fluid">
+        <div class="apply-text">
+          <h1>인생에 한 번 뿐일지도 모르는 의미있는 여행, Travel Together에서 경험해보세요.</h1>
+          <a href="apply.html" class="btn">지금 신청하기</a>
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./images/check.jpeg" style="width: 100%" />
+            <div class="text">정말 잊지 못할 경험이었어요!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./images/viet.jpeg" style="width: 100%" />
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./images/koki.jpeg" style="width: 100%" />
+            <div class="text"></div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer id="footer">
+      <img src="./images/logo_transparent.png" alt="logo" />
+      <p>&copy; 2021, All rights Reserved</p>
+    </footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>
