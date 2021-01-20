@@ -1,11 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <title>Travel Together - 여행을 새롭게 시작해봐요</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul class="logo-nav">
+          <li class="logo">
+            <img src="./images/logo_transparent.png" alt="" />
+          </li>
+        </ul>
+        <ul class="side-nav">
+          <li class="nav-element">
+            <a href="main.html">홈</a>
+          </li>
+          <li class="nav-element">
+            <a href="about.html">소개</a>
+          </li>
+          <li class="nav-element">
+            <a href="location.html">여행지</a>
+          </li>
+          <li class="nav-element">
+            <a href="apply.html">신청</a>
+          </li>
+          <li class="nav-element">
+            <a href="login.html"><i class="fas fa-user-circle"></i>로그인</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="about-jumbotron">
+        <h1>Experience Travel Together</h1>
+      </div>
+      <div class="jumbotron"></div>
+    </header>
+    <main id="about-main">
+      <section class="about-page container-fluid">
+        <div class="about-text">
+          <p>
+            Travel Together는 새로운 여행의 동행을 구하고 싶거나, 혼자 또는
+            커플끼리 여행가기 곤란할 경우 함께 여행할 사람을 모집하는
+            플랫폼입니다. 또한 전문 여행가와 함께 동행할 수 있는 기회를 제공하여
+            많은 혜택을 수혜받도록 하고 있습니다.
+          </p>
+          <p>
+            Travel Together는 새로운 여행의 동행을 구하고 싶거나, 혼자 또는
+            커플끼리 여행가기 곤란할 경우 함께 여행할 사람을 모집하는
+            플랫폼입니다. 또한 전문 여행가와 함께 동행할 수 있는 기회를 제공하여
+            많은 혜택을 수혜받도록 하고 있습니다.
+          </p>
+        </div>
+        <hr>
+        <div class="about-pros">
+          <h1>Travel Together와 함께하는 사람들</h1>
+          <div class="pros">
+            <div class="mini">
+              <div class="mini-image"></div>
+              <div class="mini-text">
+                <h2><i class="far fa-address-card"></i>  이지민</h2>
+                <p>
+                  이지민 대표는 Travel Together의 대표로서 여행자들의 재미있고
+                  의미있는 여행을 위한 항공편과 여행일정에 관한 전문가이며, 또한
+                  안전한 여행을 위해 동행자들이 지켜야 할 수칙과 규정을 담당하고
+                  있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="bbuggu">
+              <div class="bbuggu-image"></div>
+              <div class="bbuggu-text">
+                <h2><i class="far fa-address-card"></i>  양용진</h2>
+                <p>
+                  양용진은 Travel Together의 부대표로서 여행이 쉽지 않은
+                  사람들을 위해 여행을 위한 가성비의 숙박과 예산을 담당하고
+                  있으며, 또한 현지인과의 만남도 전문적으로 주선하고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section class="contact-page">
+        <h1>문의하기</h1>
+        <div class="contact-table">
+          <div class="contact-tel">
+            <div class="contact-number">Tel: 010-6296-4312<br>Email: dyyjkd@gmail.com</div>
+            <div class="contact-sns"><i class="fab fa-twitter-square"></i><i class="fab fa-facebook-square"></i><i class="fab fa-youtube-square"></i><i class="fab fa-instagram-square"></i></div>
+          </div>
+          <div class="contact-loc">경기도 수원시 영통구 삼성로 129(매탄동)</div>
+          <form action="" class="contact-form">
+            <label for="request">회사에 궁금한 점</label>
+            <input type="text" name="request" id="request" placeholder="Enter what you want to ask" class="contact-input">
+            <button class="btn" type="submit">제출</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <img src="./images/logo_transparent.png" alt="logo" />
+      <p>&copy; 2021, All rights Reserved</p>
+    </footer>
+  </body>
 </html>

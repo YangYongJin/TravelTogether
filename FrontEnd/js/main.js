@@ -1,3 +1,6 @@
+
+
+// ---------------slide animation effect ------------------
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -31,6 +34,8 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+
+// --------------scroll fade effects ------------------
 let fadeElements = document.querySelectorAll(".hide");
 window.addEventListener("scroll", function (e) {
   fadeElements = Array.from(fadeElements);

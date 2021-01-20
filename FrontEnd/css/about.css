@@ -1,0 +1,167 @@
+/* ------- about header ------ */
+.about-jumbotron {
+  background-color: rgb(239, 233, 230);
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  padding: 30px 0;
+}
+
+header .jumbotron {
+  background: url("../images/about.jpeg") no-repeat center/100%;
+}
+
+/* --------- about main ------ */
+#about-main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#about-main .about-page {
+  margin: 6rem 0;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+#about-main .about-page .about-text {
+  margin-bottom: 8rem;
+  padding: 0 15rem;
+}
+
+#about-main .about-page .about-text p {
+  font-size: 1.2rem;
+  padding-bottom: 5rem;
+}
+
+/* -------about main pros =------- */
+#about-main .about-page .about-pros {
+  margin: 8rem 0;
+  text-align: center;
+}
+
+#about-main .about-page .about-pros h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 5rem;
+}
+
+#about-main .about-page .about-pros .pros {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#about-main .about-page .about-pros .pros .mini {
+  margin-right: 6rem;
+}
+
+#about-main .about-page .about-pros .pros .mini .mini-image {
+  background: url("../images/mini.jpg") no-repeat center/100%;
+  width: 100%;
+  height: 400px;
+}
+
+#about-main .about-page .about-pros .pros .bbuggu {
+  margin-left: 6rem;
+}
+
+#about-main .about-page .about-pros .pros .bbuggu .bbuggu-text,
+#about-main .about-page .about-pros .pros .mini .mini-text {
+  padding: 0.5rem 5rem 0 0;
+  text-align: left;
+}
+
+#about-main .about-page .about-pros .pros .bbuggu .bbuggu-image {
+  background: url("../images/bbuggu.jpg") no-repeat center/100%;
+  width: 100%;
+  height: 400px;
+}
+
+/* ---------contact page------ */
+
+#about-main .contact-page {
+  margin: 8rem 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: normal;
+}
+
+#about-main .contact-page h1 {
+  font-size: 2.4rem;
+  margin-bottom: 5rem;
+}
+
+#about-main .contact-page .contact-table {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid #222;
+  border-collapse: separate;
+}
+
+#about-main .contact-page .contact-table .contact-tel {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  border-right: 2px solid #222;
+}
+
+#about-main .contact-page .contact-table .contact-tel .contact-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #222;
+  padding: 2rem 0;
+}
+
+#about-main .contact-page .contact-table .contact-tel .contact-sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+#about-main .contact-page .contact-table .contact-tel .contact-sns i {
+  padding: 0 1rem
+}
+
+#about-main .contact-page .contact-table .contact-loc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #222;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+#about-main .contact-page .contact-table .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-main .contact-page .contact-table .contact-form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 1.2rem;
+}
+
+#about-main .contact-page .contact-table .contact-form input {
+  outline: none;
+  width: 80%;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+} 
+
+#about-main .contact-page .contact-table .contact-form .btn {
+  margin-top: 1rem;
+  padding: 0.5rem 3rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
+
+
