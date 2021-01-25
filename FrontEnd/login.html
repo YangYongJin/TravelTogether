@@ -20,30 +20,13 @@
     <title>Travel Together - 여행을 새롭게 시작해봐요</title>
   </head>
   <body>
-    <main id="apply-main">
-      <section class="apply-page">
-        <div class="apply-main">
+    <main id="login-main">
+      <section class="login-page">
+        <div class="login-main">
           <div class="logo">
             <a href="main.html"></a>
           </div>
-          <form class="apply-form" action="" method="POST">
-            <div class="form-package">
-              <div class="form-control">
-                <label for="name">이름</label>
-                <input class="" type="text" name="name" id="name" />
-              </div>
-              <div class="form-control">
-                <label for="age">나이</label>
-                <input class="" type="number" name="age" id="age" />
-              </div>
-              <div class="form-control">
-                <label for="sex">성별</label>
-                <select name="sex" id="sex">
-                  <option value="male">남</option>
-                  <option value="female">여</option>
-                </select>
-              </div>
-            </div>
+          <form class="login-form" action="" method="POST">
             <div class="form-control">
               <label for="email">이메일</label>
               <input class="" type="email" name="email" id="email" />
@@ -58,29 +41,19 @@
                 value=""
               />
             </div>
-            <div class="form-control">
-              <label for="password-confirm">비밀번호 확인</label>
-              <input
-                class=""
-                type="password"
-                name="password-confirm"
-                id="password-confirm"
-                value=""
-              />
-            </div>
             <button class="btn" type="submit">로그인</button>
           </form>
-          <hr />
+          <hr>
           <div class="signup-req">
-            <p>아직 로그인을 안하셨나요?</p>
-            <a href="login.html">로그인</a>
+            <p>아직 가입을 안하셨나요?</p>
+            <a href="signup.html">회원가입</a>
           </div>
           <footer id="footer">
             <img src="./images/logo_transparent.png" alt="logo" />
             <p>&copy; 2021, All rights Reserved</p>
           </footer>
         </div>
-        <div class="apply-background"></div>
+        <div class="login-background"></div>
       </section>
     </main>
   </body>

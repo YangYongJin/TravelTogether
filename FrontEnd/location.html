@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Travel Together - 여행을 새롭게 시작해봐요</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul class="logo-nav">
+          <li class="logo">
+            <img src="./images/logo_transparent.png" alt="" />
+          </li>
+        </ul>
+        <ul class="side-nav">
+          <li class="nav-element">
+            <a href="main.html">홈</a>
+          </li>
+          <li class="nav-element">
+            <a href="about.html">소개</a>
+          </li>
+          <li class="nav-element">
+            <a href="location.html">여행지</a>
+          </li>
+          <li class="nav-element">
+            <a href="apply.html">신청</a>
+          </li>
+          <li class="nav-element">
+            <a href="login.html"><i class="fas fa-user-circle"></i>로그인</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="jumbotron"></section>
+    </header>
+    <main id="main">
+      <section class="location-page container-fluid">
+        <div class="location-text">
+          <h1>가고싶은 곳을 찾아보세요</h1>
+          <p>
+            Travel Together에서 이미 다녀온 사람들의 생생한 후기를 보면서 여행을
+            떠날 장소를 골라보세요.
+          </p>
+          <a class="btn" href="location.html">여행후기 확인하기</a>
+        </div>
+        <div class="location-places">
+          <div class="location-element">
+            <img src="./images/korea.jpg" alt="travel picture" />
+            <p>국내</p>
+          </div>
+          <div class="location-element">
+            <img src="./images/europe.jpg" alt="travel picture" />
+            <p>유럽</p>
+          </div>
+          <div class="location-element">
+            <img src="./images/asia.jpg" alt="travel picture" />
+            <p>아시아</p>
+          </div>
+          <div class="location-element">
+            <img src="./images/america.jpg" alt="travel picture" />
+            <p>미국</p>
+          </div>
+        </div>
+      </section>
+      <hr />
+    </main>
+    <footer id="footer">
+      <img src="./images/logo_transparent.png" alt="logo" />
+      <p>&copy; 2021, All rights Reserved</p>
+    </footer>
+  </body>
 </html>

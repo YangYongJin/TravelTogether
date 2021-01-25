@@ -1,0 +1,168 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+main {
+  height: 100%;
+}
+/* ------------login----------- */
+.login-page,
+.signup-page,
+.apply-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.login-main,
+.signup-main, 
+.apply-main {
+  padding-top: 6rem;
+}
+
+.logo {
+  background: url('../images/logo_transparent.png') no-repeat center/100%;
+  width: 40%;
+  height: 6rem;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.logo a {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+
+.login-background {
+  padding: 0;
+  background: url('../images/login.jpg') no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.login-form,
+.signup-form,
+.apply-form {
+  margin: 2rem auto;
+  margin-top: 0;
+  width: 50%;
+  padding: 2rem;
+}
+
+.signup-req {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgb(102, 100, 100);
+}
+
+.signup-req p {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.signup-req a,
+.signup-req a:visited {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(102, 100, 100);
+}
+
+.signup-req a:hover {
+  color: rgb(32, 29, 28);
+  transition: ease 0.6s;
+}
+
+hr {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+/* -------------signup------------------ */
+.form-package {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+
+#name,
+#age,
+#sex{
+  width: 80%;
+}
+#sex {
+  background-color: white;
+}
+
+
+.signup-background {
+  padding: 0;
+  background: url('../images/signup.jpg') no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+.apply-background {
+  padding: 0;
+  background: url('../images/signup.jpg') no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ---------- form utilities ----- */
+
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control select,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select{
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+  padding: 1rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus,
+.form-control select:focus {
+  outline-color: #00695c;
+}
+
+.form-control input.invalid,
+.form-control textarea.invalid {
+  border-color: red;
+}
+
+.btn {
+  width: 100%;
+}
+
+#footer {
+  background-color: #f7f7f7;
+  color: black;
+}
+
+#footer p {
+  font-size: 0.9rem;
+}
