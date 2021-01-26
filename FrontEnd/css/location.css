@@ -1,0 +1,259 @@
+header .jumbotron {
+  background: url("../images/location.jpg") no-repeat center/100%;
+  width: 100%;
+  height: 40rem;
+  color: white;
+  font-weight: 800;
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gamja Flower", cursive;
+}
+
+#main .location-page {
+  margin: 14rem 0;
+}
+
+#main .location-page .location-text {
+  text-align: center;
+}
+
+#main .location-page .location-text h1 {
+  font-size: 3rem;
+  padding: 0 2rem;
+}
+
+#main .location-page .location-places {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 4rem;
+}
+
+#main .location-page .location-places .location-element {
+  margin: 8rem auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 60%;
+  background-color: rgba(243, 240, 215, 0.3);
+  text-align: left;
+}
+
+#main .location-page .location-places .location-element:hover {
+  background-color: rgba(138, 255, 220, 0.3);
+  color: #f8f8f8;
+  font-weight: 800;
+  border: #283eff solid 2px;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+#main .location-page .location-places .location-element img {
+  overflow: hidden;
+  width: 100%;
+  height: 40rem;
+}
+
+#main .location-page .location-places .location-element h2 {
+  padding-left: 5rem;
+  padding-top: 2rem;
+}
+
+#main .location-page .location-places .location-element p {
+  padding: 5rem;
+  font-weight: 300;
+}
+
+/* -------------- element ------------ */
+
+#main .post-page {
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 50%;
+}
+
+.post-nav {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.post-nav li:nth-child(2) {
+  border-bottom: 1px white solid;
+}
+.post-nav li i {
+  opacity: 0.7;
+}
+.post-nav li input {
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  width: 10rem;
+}
+
+.post-main {
+  background-color: white;
+  padding: 0 3rem 3rem 3rem;
+}
+
+.post-jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(235, 235, 235);
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+.post-jumbotron h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: normal;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.post-jumbotron p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+.post-cards {
+  border: 1px solid black;
+}
+
+#main .post-page .post-card {
+  padding: 1rem 0;
+  margin: 0 2rem;
+  color: #3e3f47;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main .post-page .post-head {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  margin: 0;
+}
+
+#main .post-page .post-head .post-front label {
+  opacity: 0.6;
+}
+
+#main .post-page .post-head .post-front select {
+  border: none;
+  outline: none;
+  background: url("../images/angle-down-solid.svg") no-repeat 95% 50%;
+  background-color: white;
+  padding-left: 0.2rem;
+  font-size: 1.1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#main .post-page .post-head .post-front select:hover {
+  opacity: 0.6;
+}
+
+#main .post-page .post-card .post-front {
+  padding-left: 2rem;
+}
+
+#main .post-page .post-card .post-front .title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+#main .post-page .post-card .post-front .user {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+#main .post-page .post-card .post-back {
+  padding-right: 2rem;
+}
+
+/* ------------ views gallery ------------- */
+
+.gallery {
+  text-align: center;
+  margin: 5rem auto;
+  width: 60%;
+  margin-bottom: 10rem;
+}
+
+.gallery h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.gallery .gallery-first {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 20rem;
+  margin: 2rem 0;
+}
+
+.gallery .gallery-second {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 20rem;
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5 {
+  height: 100%;
+  padding: 0;
+  margin: 0 1rem;
+}
+
+.image1 {
+  background: url("../images/korea1.jpg") no-repeat center/100%;
+}
+.image2 {
+  background: url("../images/korea2.jpg") no-repeat center/100%;
+}
+.image3 {
+  background: url("../images/korea3.jpg") no-repeat center/100%;
+}
+.image4 {
+  background: url("../images/korea4.jpg") no-repeat center/100%;
+}
+.image5 {
+  background: url("../images/korea5.jpg") no-repeat center/100%;
+}
+
+/* utitliy */
+hr {
+  width: 90%;
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  background-color: rgb(112, 104, 93);
+}
