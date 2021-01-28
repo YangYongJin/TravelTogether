@@ -27,60 +27,63 @@
             <a href="main.html"></a>
           </div>
           <form class="apply-form" action="" method="POST">
-            <div class="form-package">
+            <div class="form-control">
+              <label for="name">제목</label>
+              <input class="" type="text" name="title" id="title" />
+            </div>
+            <div class="applyform-package">
               <div class="form-control">
-                <label for="name">이름</label>
-                <input class="" type="text" name="name" id="name" />
+                <label for="start-date">여행 시작일</label>
+                <input type="date" name="start-date" id="start-date" value="2021-01-01">
               </div>
+              <div></div>
               <div class="form-control">
-                <label for="age">나이</label>
-                <input class="" type="number" name="age" id="age" />
-              </div>
-              <div class="form-control">
-                <label for="sex">성별</label>
-                <select name="sex" id="sex">
-                  <option value="male">남</option>
-                  <option value="female">여</option>
-                </select>
+                <label for="end-date">여행 종료일</label>
+                <input type="date" name="end-date" id="end-date" value="2021-01-01">
               </div>
             </div>
             <div class="form-control">
-              <label for="email">이메일</label>
-              <input class="" type="email" name="email" id="email" />
-            </div>
-            <div class="form-control">
-              <label for="password">비밀번호</label>
-              <input
+              <label for="content">내용</label>
+              <textarea
                 class=""
-                type="password"
-                name="password"
-                id="password"
-                value=""
-              />
+                name="content"
+                id="content"
+                placeholder="여행에 대해 설명해주세요.(여행하는 국가, 도시, 대략적인 일정과 비용 등) - 1000자 이내"
+                maxlength="1000"
+              ></textarea>
             </div>
             <div class="form-control">
-              <label for="password-confirm">비밀번호 확인</label>
-              <input
+              <label for="preference">동행 조건</label>
+              <textarea
                 class=""
-                type="password"
-                name="password-confirm"
-                id="password-confirm"
-                value=""
-              />
+                name="preference"
+                id="preference"
+                placeholder="함께할 사람에 대해 설명해주세요.(인원 수, 성별, 나이 등) - 500자 이내"
+                maxlength="500"
+              ></textarea>
+            </div>
+            <div class="form-control">
+              <label for="contact">연락 방법</label>
+              <textarea
+                class=""
+                name="contact"
+                id="contact"
+                placeholder="여행에 관해 연락할 방법을 알려줏에요,(이메일, 댓글, 또는 개인 sns 등) - 500자 이내"
+                maxlength="500"
+              ></textarea>
             </div>
             <button class="btn" type="submit">로그인</button>
           </form>
           <hr />
           <div class="signup-req">
             <p>아직 로그인을 안하셨나요?</p>
-            <a href="login.html">로그인</a>
+            <a href="login.html">신청</a>
           </div>
           <footer id="footer">
             <img src="./images/logo_transparent.png" alt="logo" />
             <p>&copy; 2021, All rights Reserved</p>
           </footer>
         </div>
-        <div class="apply-background"></div>
       </section>
     </main>
   </body>

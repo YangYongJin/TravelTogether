@@ -3,7 +3,7 @@ html {
   padding: 0;
   height: 100%;
 }
-body{
+body {
   height: 100%;
 }
 main {
@@ -11,21 +11,20 @@ main {
 }
 /* ------------login----------- */
 .login-page,
-.signup-page,
-.apply-page {
+.signup-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
 }
 
 .login-main,
-.signup-main, 
+.signup-main,
 .apply-main {
   padding-top: 6rem;
 }
 
 .logo {
-  background: url('../images/logo_transparent.png') no-repeat center/100%;
+  background: url("../images/logo_transparent.png") no-repeat center/100%;
   width: 40%;
   height: 6rem;
   margin: 0 auto;
@@ -39,10 +38,9 @@ main {
   display: block;
 }
 
-
 .login-background {
   padding: 0;
-  background: url('../images/login.jpg') no-repeat center/cover;
+  background: url("../images/login.jpg") no-repeat center/cover;
   width: 100%;
   height: 100%;
 }
@@ -85,39 +83,53 @@ hr {
   margin: 0 auto;
 }
 
-
 /* -------------signup------------------ */
 .form-package {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
 
-
 #name,
 #age,
-#sex{
+#sex {
   width: 80%;
 }
 #sex {
   background-color: white;
 }
 
-
 .signup-background {
   padding: 0;
-  background: url('../images/signup.jpg') no-repeat center/cover;
+  background: url("../images/signup.jpg") no-repeat center/cover;
   width: 100%;
   height: 100%;
 }
-
 
 .apply-background {
   padding: 0;
-  background: url('../images/signup.jpg') no-repeat center/cover;
+  background: url("../images/signup.jpg") no-repeat center/cover;
   width: 100%;
   height: 100%;
 }
 
+/* -----------apply page ----------- */
+#content {
+  height: 20rem;
+}
+
+#preference,
+#contact {
+  height: 10rem;
+}
+
+.applyform-package {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr;
+}
+
+#apply-main .logo {
+  width: 18%;
+}
 
 /* ---------- form utilities ----- */
 
@@ -136,7 +148,7 @@ hr {
 
 .form-control input,
 .form-control textarea,
-.form-control select{
+.form-control select {
   border: 1px solid #a1a1a1;
   font: inherit;
   border-radius: 2px;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
@@ -20,8 +20,8 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/location.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/location.css" />
     <title>Travel Together - 여행을 새롭게 시작해봐요</title>
   </head>
   <body>
@@ -29,24 +29,24 @@
       <nav class="main-nav">
         <ul class="logo-nav">
           <li class="logo">
-            <img src="../images/logo_transparent.png" alt="" />
+            <img src="./images/logo_transparent.png" alt="" />
           </li>
         </ul>
         <ul class="side-nav">
           <li class="nav-element">
-            <a href="../main.html">홈</a>
+            <a href="main.html">홈</a>
           </li>
           <li class="nav-element">
-            <a href="../about.html">소개</a>
+            <a href="about.html">소개</a>
           </li>
           <li class="nav-element">
-            <a href="../location.html">여행지</a>
+            <a href="location.html">여행지</a>
           </li>
           <li class="nav-element">
-            <a href="../apply.html">신청</a>
+            <a href="apply.html">신청</a>
           </li>
           <li class="nav-element">
-            <a href="../login.html"><i class="fas fa-user-circle"></i>로그인</a>
+            <a href="login.html"><i class="fas fa-user-circle"></i>로그인</a>
           </li>
         </ul>
       </nav>
@@ -62,27 +62,21 @@
           </li>
         </ul>
         <div class="post-main">
-          <div class="post-jumbotron">
-            <h1>한 국</h1>
-            <p>
-              최고의 도시 서울에서 실컷 놀아봅시다. 여러분들이 즐거워할거야
-              아마두.
-            </p>
-          </div>
-          <div class="post-cards">
-            <div class="post-card post-head">
-              <div class="post-front">
-                <label for="filter"><i class="fas fa-bars"></i> </label>
-                <select name="filter" id="filter">
-                  <option value="all">전체</option>
-                  <option value="recent">모집 중</option>
-                </select>
-              </div>
-              <div class="post-back">
-                <button class="btn" id="apply" onclick="location.href = location.href = `../view.html?country=korea`;">
-                  <i class="fas fa-plus"></i> 모집글 작성하기
-                </button>
-              </div>
+          <div class="view-main">
+            <div class="view-user"></div>
+            <h2 class="view-title"></h2>
+            <div class="view-content"></div>
+            <div class="view-date">
+              <h3>여행 기건</h3>
+              <p></p>
+            </div>
+            <div class="view-preference">
+              <h3>함께 하고 싶은 사람</h3>
+              <p></p>
+            </div>
+            <div class="view-contact">
+              <h3>함께하는 방법</h3>
+              <p></p>
             </div>
           </div>
         </div>
@@ -101,9 +95,9 @@
       </section>
     </main>
     <footer id="footer">
-      <img src="../images/logo_transparent.png" alt="logo" />
+      <img src="./images/logo_transparent.png" alt="logo" />
       <p>&copy; 2021, All rights Reserved</p>
     </footer>
-    <script src="../js/locations/korea.js"></script>
+    <script src="js/view.js"></script>
   </body>
 </html>
