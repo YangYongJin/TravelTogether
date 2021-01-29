@@ -3,13 +3,14 @@ const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 const mongoose = require("mongoose");
 const path = require("path");
+const morgan = require('morgan');
 // const multer = require('multer');
 
 // const feedRoutes = require("./routes/feed");
-// const authRoutes = require("./routes/auth");
+const authRoutes = require("./routes/auth");
 
 const MONGODB_URI =
-  "mongodb+srv://kinggodjinny:rktdydwls61@cluster0.8cgyf.gcp.mongodb.net/network?retryWrites=true&w=majority";
+  "mongodb+srv://kinggodjinny:rktdydwls61@cluster0.8cgyf.gcp.mongodb.net/traveltogether?retryWrites=true&w=majority";
 
 const app = express();
 
@@ -34,9 +35,12 @@ const app = express();
 //   }
 // };
 
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+
+app.use(morgan('combined'))
 
 // app.use(
 //   multer({ storage: fileStorage, fileFilter: fileFilter }).single("image")
@@ -55,7 +59,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/feed", feedRoutes);
+// app.use("/feed", feedRoutes);
 app.use("/auth", authRoutes);
 
 app.use((error, req, res, next) => {

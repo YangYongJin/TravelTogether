@@ -3,9 +3,15 @@ const jwt = require("jsonwebtoken");
 
 const User = require("../models/user");
 
-export const postSignup = async (req, res, next) => {
+exports.postSignup = async (req, res, next) => {
   const { name, email, password, age, sex } = req.body;
   try {
+    const existUser = await User.findOne({ email: email });
+    if (existUser) {
+      const err = new Error("Email already exists");
+      err.status = 401;
+      return next(err);
+    }
     const hashedPassword = await bycrypt.hash(password, 10);
     const user = await User.create({
       name: name,
@@ -16,7 +22,7 @@ export const postSignup = async (req, res, next) => {
     });
     const token = jwt.sign(
       {
-        name: name,
+        userId: user._id.toString(),
         email: email,
       },
       "secret",
@@ -41,6 +47,52 @@ export const postSignup = async (req, res, next) => {
   }
 };
 
-export const postLogin = (req, res, next) => {};
+exports.postLogin = async (req, res, next) => {
+  const { email, password } = req.body;
+  try {
+    const existUser = await User.findOne({ email: email });
+    if (!existUser) {
+      const err = new Error("Wrong Email");
+      err.status = 401;
+      return next(err);
+    }
+    const result = await bycrypt.compare(password, existUser.password);
+    if (!result) {
+      const err = new Error("Wrong password!");
+      err.status = 401;
+      return next(err);
+    } else {
+      const token = jwt.sign(
+        {
+          userId: existUser._id.toString(),
+          email: email,
+        },
+        "secret",
+        {
+          expiresIn: "2h",
+        }
+      );
+      res
+        .cookie("access_token", token, {
+          maxAge: 1000 * 60 * 60 * 24 * 7, // 7일
+          httpOnly: true,
+        })
+        .status(201)
+        .json({
+          message: "user login successful",
+          user: existUser,
+        });
+    }
+  } catch (err) {
+    err.status = 401;
+    err.message = "Login Failed";
+    next(err);
+  }
+};
 
-export const postLogout = (req, res, next) => {};
+exports.postLogout = (req, res, next) => {
+  res.cookie('access_token', '');
+  res.status(204).json({
+    message: 'logout',
+  }); // No Content
+};
