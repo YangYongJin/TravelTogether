@@ -26,7 +26,7 @@
           <div class="logo">
             <a href="main.html"></a>
           </div>
-          <form id="apply-form" class="apply-form" action="" method="POST">
+          <div id="apply-form" class="apply-form">
             <div class="form-control">
               <label for="title">제목</label>
               <input class="" type="text" name="title" id="title" />
@@ -72,8 +72,8 @@
                 maxlength="500"
               ></textarea>
             </div>
-            <button class="btn" type="submit">신청</button>
-          </form>
+            <button class="btn" id="apply">신청</button>
+          </div>
           <hr />
           <div class="signup-req">
             <p>아직 로그인을 안하셨나요?</p>
@@ -86,5 +86,6 @@
         </div>
       </section>
     </main>
+    <script src="./js/apply.js" type="module"></script>
   </body>
 </html>

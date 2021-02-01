@@ -1,11 +1,15 @@
 const Post = require("../models/post");
+const User = require("../models/user");
 
 exports.getPosts = async (req, res, next) => {
   try {
     const region = req.query.region;
+    console.log(region);
     const posts = await Post.find({
       region: region,
-    });
+    })
+      .populate("user")
+      .exec();
     res.status(200).json({
       message: "posts Success",
       posts: posts,
@@ -19,7 +23,6 @@ exports.getPosts = async (req, res, next) => {
 
 exports.createPost = async (req, res, next) => {
   try {
-    const region = req.query.region;
     const user = await User.findById(req.userId);
     const {
       title,
@@ -28,6 +31,7 @@ exports.createPost = async (req, res, next) => {
       content,
       preference,
       contact,
+      region,
     } = req.body;
     const post = await Post.create({
       title,
@@ -53,7 +57,7 @@ exports.createPost = async (req, res, next) => {
 exports.getPost = async (req, res, next) => {
   const postId = req.params.postId;
   try {
-    const post = await Post.findById({ _id: postId });
+    const post = await Post.findById({ _id: postId }).populate("user").exec();
     if (!post) {
       err.status = 404;
       err.message = "No Post";

@@ -46,7 +46,7 @@ app.use(morgan('dev'))
 //   multer({ storage: fileStorage, fileFilter: fileFilter }).single("image")
 // );
 app.use("/images", express.static(path.join(__dirname, "images")));
-
+app.set('etag', false);
 
 // handling cors
 app.use((req, res, next) => {
@@ -60,7 +60,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/post", postRoutes);
+app.use("/", postRoutes);
 app.use("/auth", authRoutes);
 
 app.use((error, req, res, next) => {

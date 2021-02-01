@@ -45,8 +45,8 @@
           <li class="nav-element">
             <a href="../apply.html">신청</a>
           </li>
-          <li class="nav-element">
-            <a href="../login.html"><i class="fas fa-user-circle"></i>로그인</a>
+          <li class="nav-element" id="nav-login">
+            <a href="login.html"><i class="fas fa-user-circle"></i>로그인</a>
           </li>
         </ul>
       </nav>
@@ -79,7 +79,7 @@
                 </select>
               </div>
               <div class="post-back">
-                <button class="btn" id="apply" onclick="location.href = location.href = `../view.html?region=korea`;">
+                <button class="btn" id="apply" >
                   <i class="fas fa-plus"></i> 모집글 작성하기
                 </button>
               </div>
@@ -104,6 +104,7 @@
       <img src="../images/logo_transparent.png" alt="logo" />
       <p>&copy; 2021, All rights Reserved</p>
     </footer>
-    <script src="../js/locations/korea.js"></script>
+    <script src="../js/locations/korea.js" type="module"></script>
+    <script src="../js/utilities/nav.js" type="module"></script>
   </body>
 </html>
