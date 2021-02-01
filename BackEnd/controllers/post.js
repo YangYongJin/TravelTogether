@@ -2,7 +2,10 @@ const Post = require("../models/post");
 
 exports.getPosts = async (req, res, next) => {
   try {
-    const posts = await Post.find({});
+    const region = req.query.region;
+    const posts = await Post.find({
+      region: region,
+    });
     res.status(200).json({
       message: "posts Success",
       posts: posts,
@@ -16,6 +19,7 @@ exports.getPosts = async (req, res, next) => {
 
 exports.createPost = async (req, res, next) => {
   try {
+    const region = req.query.region;
     const user = await User.findById(req.userId);
     const {
       title,
@@ -33,6 +37,7 @@ exports.createPost = async (req, res, next) => {
       startDate,
       endDate,
       user,
+      region,
     });
     res.status(201).json({
       message: "posts create success",
@@ -90,7 +95,7 @@ exports.updatePost = async (req, res, next) => {
       content,
       preference,
       contact,
-    }
+    };
     const updatedPost = await post.save();
     res.status(200).json({
       message: "update post Success",
@@ -102,7 +107,6 @@ exports.updatePost = async (req, res, next) => {
     next(err);
   }
 };
-
 
 exports.deletePost = async (req, res, next) => {
   const postId = req.params.postId;
@@ -123,7 +127,3 @@ exports.deletePost = async (req, res, next) => {
     next(err);
   }
 };
-
-
-
-

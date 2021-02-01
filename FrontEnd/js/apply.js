@@ -10,4 +10,4 @@ function getQueryStringObject() {
   return b;
 }
 const qs = getQueryStringObject();
-const country = qs.country;
+const region = qs.region;
