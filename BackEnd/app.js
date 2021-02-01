@@ -6,7 +6,7 @@ const path = require("path");
 const morgan = require('morgan');
 // const multer = require('multer');
 
-// const feedRoutes = require("./routes/feed");
+const postRoutes = require("./routes/post");
 const authRoutes = require("./routes/auth");
 
 const MONGODB_URI =
@@ -60,7 +60,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use("/feed", feedRoutes);
+app.use("/post", postRoutes);
 app.use("/auth", authRoutes);
 
 app.use((error, req, res, next) => {
