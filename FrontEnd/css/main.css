@@ -43,7 +43,8 @@ header .main-nav .side-nav .nav-element {
   margin: 0 1.2rem;
 }
 
-header .main-nav .side-nav .nav-element a {
+header .main-nav .side-nav .nav-element a,
+header .main-nav .side-nav .nav-element .logout {
   text-decoration: none;
   color: black;
   cursor: pointer;
@@ -55,7 +56,8 @@ header .main-nav .side-nav .nav-element a i {
 }
 
 header .main-nav .side-nav .nav-element a:active,
-header .main-nav .side-nav .nav-element a:hover {
+header .main-nav .side-nav .nav-element a:hover,
+header .main-nav .side-nav .nav-element .logout:hover {
   color: #f09041;
 }
 

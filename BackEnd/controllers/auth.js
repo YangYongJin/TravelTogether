@@ -30,16 +30,11 @@ exports.postSignup = async (req, res, next) => {
         expiresIn: "2h",
       }
     );
-    res
-      .cookie("access_token", token, {
-        maxAge: 1000 * 60 * 60 * 24 * 7, // 7일
-        httpOnly: true,
-      })
-      .status(201)
-      .json({
-        message: "createUserSuccessfully",
-        user: user,
-      });
+    res.status(201).json({
+      message: "createUserSuccessfully",
+      user: user,
+      token: token,
+    });
   } catch (err) {
     err.status = 401;
     err.message = "Signup Failed";
@@ -72,16 +67,11 @@ exports.postLogin = async (req, res, next) => {
           expiresIn: "2h",
         }
       );
-      res
-        .cookie("access_token", token, {
-          maxAge: 1000 * 60 * 60 * 24 * 7, // 7일
-          httpOnly: true,
-        })
-        .status(201)
-        .json({
-          message: "user login successful",
-          user: existUser,
-        });
+      res.status(201).json({
+        message: "user login successful",
+        user: existUser,
+        token: token,
+      });
     }
   } catch (err) {
     err.status = 401;
@@ -91,8 +81,7 @@ exports.postLogin = async (req, res, next) => {
 };
 
 exports.postLogout = (req, res, next) => {
-  res.cookie('access_token', '');
-  res.status(204).json({
-    message: 'logout',
+  res.status(201).json({
+    message: "logout",
   }); // No Content
 };
