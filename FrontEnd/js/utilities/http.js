@@ -14,7 +14,6 @@ class Http {
       },
       body: JSON.stringify(data),
     });
-    console.log(response);
     const resData = await response.json();
     return resData;
   }
@@ -28,9 +27,7 @@ class Http {
       },
       body: JSON.stringify(data),
     });
-    console.log(response);
     const resData = await response.json();
-    console.log(resData);
     return resData;
   }
 
