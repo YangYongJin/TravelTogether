@@ -1,4 +1,4 @@
-# 물어봐 (06devbros)
+# TravelTogether(side project)
 ![logo](./FrontEnd/images/logo_transparent.png)
  
 TravelTogether는 여행동행을 위한 플랫폼 서비스입니다. 로그인 해서 자유롭게 여행 동행을 
