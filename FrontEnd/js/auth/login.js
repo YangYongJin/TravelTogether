@@ -21,5 +21,6 @@ async function login() {
   localStorage.setItem("user", JSON.stringify(user));
   localStorage.setItem("token", token);
 
-  location.href = "main.html";
+  // location.href = "main.html";
+  history.back();
 }

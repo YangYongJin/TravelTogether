@@ -22,5 +22,5 @@ async function logout() {
   );
   localStorage.removeItem("user");
   localStorage.removeItem("token");
-  authNav.innerHTML = `<a href="login.html"><i class="fas fa-user-circle"></i>로그인</a>`;
+  location.reload();
 }

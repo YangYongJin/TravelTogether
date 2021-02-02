@@ -77,7 +77,7 @@ exports.getPost = async (req, res, next) => {
 exports.updatePost = async (req, res, next) => {
   const postId = req.params.postId;
   try {
-    let post = await Post.findById({ _id: postId });
+    const post = await Post.findById({ _id: postId });
     if (!post) {
       err.status = 404;
       err.message = "No Post";
@@ -91,15 +91,12 @@ exports.updatePost = async (req, res, next) => {
       preference,
       contact,
     } = req.body;
-    post = {
-      ...post,
-      title,
-      startDate,
-      endDate,
-      content,
-      preference,
-      contact,
-    };
+    post.title = title;
+    post.startDate = startDate;
+    post.endDate = endDate;
+    post.content = content;
+    post.preference = preference;
+    post.contact = contact;
     const updatedPost = await post.save();
     res.status(200).json({
       message: "update post Success",

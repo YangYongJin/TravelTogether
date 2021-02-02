@@ -262,6 +262,32 @@ header .jumbotron {
   margin-right: 0.2rem;
 }
 
+.view-admin {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.view-edit {
+  padding-right: 2rem;
+  cursor: pointer;
+  color: #f7805c;
+}
+
+.view-edit:hover {
+  color: rgb(224, 214, 61);
+}
+
+.view-delete {
+  cursor: pointer;
+  color: rgb(252, 69, 69);
+}
+
+.view-delete:hover {
+  color: #fdb74d;
+}
+
 .view-main .view-title {
   font-size: 1.5rem;
   font-weight: 700;

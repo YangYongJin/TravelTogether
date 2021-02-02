@@ -31,11 +31,12 @@ class Http {
     return resData;
   }
 
-  async put(url, data) {
+  async put(url, data, token) {
     const response = await fetch(url, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
       },
       body: JSON.stringify(data),
     });
@@ -44,11 +45,12 @@ class Http {
     return resData;
   }
 
-  async delete(url) {
+  async delete(url, token) {
     const response = await fetch(url, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
       },
     });
 

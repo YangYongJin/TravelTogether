@@ -25,14 +25,38 @@ window.addEventListener("DOMContentLoaded", initPage);
 async function initPage() {
   const post = await getPost();
   showPost(post);
+  await showAdmin(post);
 }
 
 async function getPost() {
   const qs = getQueryStringObject();
   const postId = qs._id;
   const { post } = await http.get(`http://localhost:3000/post/${postId}`);
-  console.log(post);
   return post;
+}
+
+async function showAdmin(post){
+  const currentUser = JSON.parse(localStorage.getItem('user'))._id;
+  const writeUser = post.user._id;
+  if(currentUser && (currentUser === writeUser)) {
+    const viewAdmin = document.querySelector('.view-admin');
+    const viewEdit = document.createElement('div');
+    viewEdit.classList.add('view-edit');
+    viewEdit.innerHTML = `<i class="fas fa-edit"></i> 수정`;
+    const viewDelete = document.createElement('div');
+    viewDelete.classList.add('view-delete');
+    viewDelete.innerHTML = `<i class="far fa-minus-square"></i> 삭제`;
+    viewEdit.addEventListener('click', function(){
+      location.href = `./apply.html?mode=edit&_id=${post._id}`;
+    });
+    viewDelete.addEventListener('click', async function(){
+      const token = localStorage.getItem('token');
+      await http.delete(`http://localhost:3000/post/${post._id}`, token);
+      location.href = './locations/korea.html';
+    });
+    viewAdmin.appendChild(viewEdit);
+    viewAdmin.appendChild(viewDelete);
+  }
 }
 
 function getQueryStringObject() {

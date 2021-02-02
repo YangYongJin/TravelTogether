@@ -23,8 +23,8 @@ async function signup() {
   if (password != passwordConfirm) {
     error = "패스워드가 일치하지 않습니다.";
   } else {
-    const { user, message } = await http.post(
-      "http://localhost:3000/auth/login",
+    const { user, token } = await http.post(
+      "http://localhost:3000/auth/signup",
       data
     );
     localStorage.setItem("user", JSON.stringify(user));

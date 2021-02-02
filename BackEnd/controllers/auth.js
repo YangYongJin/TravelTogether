@@ -27,7 +27,7 @@ exports.postSignup = async (req, res, next) => {
       },
       "secret",
       {
-        expiresIn: "2h",
+        expiresIn: "7d",
       }
     );
     res.status(201).json({
@@ -64,7 +64,7 @@ exports.postLogin = async (req, res, next) => {
         },
         "secret",
         {
-          expiresIn: "2h",
+          expiresIn: "7d",
         }
       );
       res.status(201).json({
